@@ -3,6 +3,7 @@ import React from 'react'
 
 // Components
 import Sidebar from '../../common/Sidebar'
+import RealTimeChart from './components/RealTimeChart'
 
 // Styled
 import {
@@ -10,16 +11,16 @@ import {
 	Content
 } from './styles'
 
-const Home: React.FC = () => {
+const Chart: React.FC = () => {
 	return (
 		<Container>
 			<Content>
-				<h2>Next.js Structure</h2>
-				<h5>A real-time chart by Quindinzão.</h5>
+				<h2>Charts</h2>
+				<RealTimeChart />
 			</Content>
-			<Sidebar home={true} />
+			<Sidebar chart={true} />
 		</Container>
 	)
 }
 
-export default Home
+export default Chart

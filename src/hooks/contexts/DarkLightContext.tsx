@@ -30,7 +30,7 @@ export const DarkLightProvider = ({
 	useEffect(() => {
 		if (checked) setTheme(light)
 		else setTheme(dark)
-	})
+	}, [ checked ])
 
 	return (
 		<DarkLightContext.Provider value={{

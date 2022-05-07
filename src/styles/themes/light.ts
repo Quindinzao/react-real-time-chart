@@ -6,7 +6,8 @@ const light = {
 		link: '#E2E8F0',
 
 		primary: '#61DBFB',
-		secondary: '#34FF00',
+		secondary: '#845EC2',
+		terciary: '#34FF00',
 
 		gray_300: '#363636',
 		gray_400: '#323238',

@@ -13,7 +13,7 @@ import {
 } from '../../../hooks/contexts/DarkLightContext'
 
 // Assets
-import ReactIcon from '../../../assets/images/reactjs-icon.svg'
+import ReactIcon from '../../../assets/svg/reactjs-icon.svg'
 
 // Styled
 import {
@@ -26,10 +26,12 @@ import {
 
 interface SidebarProps {
   home?: boolean
+  chart?: boolean
 }
 
 const Sidebar: React.FC<SidebarProps> = ({
-	home
+	home,
+	chart
 }) => {
 	const [ isActive, setIsActive ] = useState(false)
 	
@@ -56,6 +58,9 @@ const Sidebar: React.FC<SidebarProps> = ({
 				</h5>
 				<Link href='/' isActive={home}>
           HOME
+				</Link>
+				<Link href='/chart' isActive={chart}>
+          CHART
 				</Link>
 			</Content>
 			<ButtonMenu onClick={() => setIsActive(!isActive)}>

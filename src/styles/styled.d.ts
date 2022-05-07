@@ -11,6 +11,7 @@ declare module 'styled-components' {
   
       primary: string
       secondary: string
+      terciary: string
   
       gray_300: string
       gray_400: string
