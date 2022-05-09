@@ -1,7 +1,6 @@
 // External libraries
 import React, {
-	useEffect,
-	useState 
+	ReactNode 
 } from 'react'
 
 // Styled
@@ -9,16 +8,19 @@ import {
 	Container
 } from './styles'
 
-const HeaderChart: React.FC = () => {
-	const handlePause = () => {
-		console.log('test')
-	}
+interface HeaderChartProps {
+	children: ReactNode
+	title: string
+}
+
+const HeaderChart: React.FC<HeaderChartProps> = ({
+	children,
+	title
+}) => {
 	return (
 		<Container>
-			<h5>Real-Time Chart</h5>
-			<button onClick={handlePause}>
-				<img src='/png/pause-button.png' alt='pause' />
-			</button>
+			<h5>{title}</h5>
+			{children}
 		</Container>
 	)
 }

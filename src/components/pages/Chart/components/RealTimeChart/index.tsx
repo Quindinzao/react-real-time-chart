@@ -23,6 +23,7 @@ import dark from '../../../../../styles/themes/dark'
 
 const RealTimeChart: React.FC = () => {
 	const [ dataChart, setDataChart ] = useState([ [ 'Unidade de tempo', 'Unidade de medida' ] ])
+	const [ pause, setPause ] = useState(false)
 
 	const {
 		theme 
@@ -34,6 +35,8 @@ const RealTimeChart: React.FC = () => {
 	}
 
 	const fetchData = () => {
+		if (pause) return
+		console.log(pause)
 		const lastValueRead = Math.floor(Math.random() * 10)
 		const now = new Date()
 				
@@ -45,6 +48,8 @@ const RealTimeChart: React.FC = () => {
 			return newDataArray
 		})
 	}
+
+	const handlePause = () => setPause(!pause)
 	
 	const options = {
 		curveType: 'function',
@@ -66,11 +71,18 @@ const RealTimeChart: React.FC = () => {
 		return () => {
 			clearInterval(intervalId)
 		}
-	}, [])
+	}, [ pause ])
 
 	return (
 		<Container>
-			<HeaderChart />
+			<HeaderChart title={'React Real-Time Chart'}>
+				<button onClick={handlePause}>
+					{pause 
+						? <img src='/png/play-button.png' alt='pause' />
+						: <img src='/png/pause-button.png' alt='pause' />
+					}
+				</button>
+			</HeaderChart>
 			<Chart
 				chartType='LineChart'
 				width='100%'
