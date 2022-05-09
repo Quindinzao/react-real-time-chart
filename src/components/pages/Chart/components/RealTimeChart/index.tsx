@@ -30,7 +30,7 @@ const RealTimeChart: React.FC = () => {
 	} = useContext(DarkLightContext)
 
 	const styledItemsChart = {
-		backgroundColorChart: theme === dark ? dark.colors.background : light.colors.background,
+		backgroundColorChart: theme === dark ? dark.colors.backgroundChart : light.colors.backgroundChart,
 		lineChart: theme === dark ? dark.colors.terciary : light.colors.terciary
 	}
 

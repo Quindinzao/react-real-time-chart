@@ -6,6 +6,7 @@ declare module 'styled-components' {
 
     colors: {
       background: string
+      backgroundChart: string
       text: string
       link: string
   

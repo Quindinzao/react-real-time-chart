@@ -3,6 +3,7 @@ const dark = {
   
 	colors: {
 		background: '#121214',
+		backgroundChart: '#222226',
 		text: '#E2E8F0',
 		link: '#E2E8F0',
 

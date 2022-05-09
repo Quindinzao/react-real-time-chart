@@ -1,7 +1,9 @@
 const light = {
 	title: 'light',
+	
 	colors: {
 		background: '#E2E8F0',
+		backgroundChart: '#E6E6E6',
 		text: '#121214',
 		link: '#E2E8F0',
 
